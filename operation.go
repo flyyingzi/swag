@@ -242,9 +242,9 @@ func (operation *Operation) parseAndExtractionParamAttribute(commentLine, schema
 			l := strings.Index(attr, "(")
 			r := strings.Index(attr, ")")
 			if !(l == -1 && r == -1) {
-				if schemaType != "string" {
-					log.Panicf("maxlength is attribute to set to a number. comment=%s got=%s", commentLine, schemaType)
-				}
+				//if schemaType != "string" {
+				//	log.Panicf("maxlength is attribute to set to a number. comment=%s got=%s", commentLine, schemaType)
+				//}
 				attr = strings.TrimSpace(attr[l+1 : r])
 				n, err := strconv.ParseInt(attr, 10, 64)
 				if err != nil {
@@ -257,9 +257,9 @@ func (operation *Operation) parseAndExtractionParamAttribute(commentLine, schema
 			l := strings.Index(attr, "(")
 			r := strings.Index(attr, ")")
 			if !(l == -1 && r == -1) {
-				if schemaType != "string" {
-					log.Panicf("maxlength is attribute to set to a number. comment=%s got=%s", commentLine, schemaType)
-				}
+				//if schemaType != "string" {
+				//	log.Panicf("maxlength is attribute to set to a number. comment=%s got=%s", commentLine, schemaType)
+				//}
 				attr = strings.TrimSpace(attr[l+1 : r])
 				n, err := strconv.ParseInt(attr, 10, 64)
 				if err != nil {
